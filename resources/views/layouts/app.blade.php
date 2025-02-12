@@ -9,6 +9,17 @@
 
     @vite('resources/css/app.css')
     @livewireStyles
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W64ZGD8KZB');
+    </script>
 </head>
 <body class="bg-[#D9D9D9]">
     <div>
