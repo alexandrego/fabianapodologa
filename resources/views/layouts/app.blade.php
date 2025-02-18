@@ -13,16 +13,14 @@
     <!-- Google Tag para conversão -->
     <script>
         function gtag_report_conversion(url) {
-        var callback = function () {
-            if (typeof(url) != 'undefined') {
-            window.location = url;
-            }
-        };
         gtag('event', 'conversion', {
             'send_to': 'AW-687125838/R69nCI_d9Z8aEM7q0scC',
-            'event_callback': callback
+            'event_callback': function() {
+                window.location.href = url;
+            }
         });
-        return false;
+        // Retorna true para permitir que o link funcione mesmo se o evento não for registrado
+        return true;
         }
     </script>
 
