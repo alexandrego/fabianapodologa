@@ -5,7 +5,7 @@
         <a href="#sobre-mim" class="hover:text-blue-500">Sobre mim</a>
         <a href="#depoimentos" class="hover:text-blue-500">Depoimentos</a>
         <a href="#onde-atendo" class="hover:text-blue-500">Onde Atendo</a>
-        <a href="#contato" class="hover:text-blue-500">Contato</a>
+        {{-- <a href="#contato" class="hover:text-blue-500">Contato</a> --}}
     </div>
 
     <!-- Menu para mobile -->
