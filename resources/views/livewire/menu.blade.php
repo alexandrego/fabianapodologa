@@ -25,7 +25,7 @@
                 <a href="#sobre-mim" class="block px-4 py-2 hover:bg-gray-100">Sobre mim</a>
                 <a href="#depoimentos" class="block px-4 py-2 hover:bg-gray-100">Depoimentos</a>
                 <a href="#onde-atendo" class="block px-4 py-2 hover:bg-gray-100">Onde Atendo</a>
-                <a href="#contato" class="block px-4 py-2 hover:bg-gray-100">Contato</a>
+                {{-- <a href="#contato" class="block px-4 py-2 hover:bg-gray-100">Contato</a> --}}
             </div>
         @endif
     </div>
