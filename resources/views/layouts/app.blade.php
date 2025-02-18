@@ -10,6 +10,22 @@
     @vite('resources/css/app.css')
     @livewireStyles
 
+    <!-- Google Tag para conversão -->
+    <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-687125838/R69nCI_d9Z8aEM7q0scC',
+            'event_callback': callback
+        });
+        return false;
+        }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
     </script>
