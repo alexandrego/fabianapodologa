@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <livewire:hello-world />
-
-    <livewire:menu />
-
     <livewire:banner />
 
     <livewire:minhas-especialidades />

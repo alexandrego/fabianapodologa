@@ -15,6 +15,15 @@ export default {
                 // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 'iria-sans': ['Iria Sans', 'sans-serif'],
             },
+            animation: {
+                wiggle: "wiggle 3s ease-in-out infinite",
+            },
+            keyframes: {
+                wiggle: {
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(-10px)" },
+                },
+            },
         },
     },
     plugins: [],

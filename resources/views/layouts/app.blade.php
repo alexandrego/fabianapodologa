@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('assets/img/nova-logo.svg') }}">
 
-    <title>Podologia Dra. Fabiana</title>
+    <title>Podóloga - Fabiana Gonçalves</title>
 
     @vite('resources/css/app.css')
     @livewireStyles
@@ -35,7 +35,7 @@
         gtag('config', 'G-W64ZGD8KZB');
     </script>
 </head>
-<body class="bg-[#D9D9D9]">
+<body class="bg-[#ffffff]">
     <div>
         @yield('content')
     </div>

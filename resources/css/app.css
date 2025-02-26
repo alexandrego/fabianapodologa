@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-fundo-ellipse {
+  background-image: url('/assets/img/fundo-ellipse.svg');
+}
