@@ -1,5 +1,5 @@
 <div class="w-full flex items-center justify-between p-12 bg-cover bg-center bg-no-repeat" 
-    style="background-image: url('/assets/img/fundo-ellipse.svg');">
+    style="background-image: url('/assets/img/fundo-ellipse.svg');background-size: contain;">
     <!-- Informações e botão -->
     <div class="w-1/2 flex flex-col items-center justify-between">
         <div class="font-bold text-[80px]">Podóloga</div>
@@ -30,24 +30,14 @@
             </div>
         </div>
 
-        <!-- Botão do whatsapp -->
-        <div class="mt-6">
-            <button class="bg-blue-500 text-white px-14 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-600 transition">
-                Mais Informações
-            </button>
-        </div>
-<<<<<<< HEAD
-
-        <!-- Botão com rastreamento de clique -->
+        <!-- Botão do whatsapp com rastreamento de clique -->
         <a href="https://wa.me/47991626283?text=Olá%20Dra.%20Fabiana,%20gostaria%20de%20mais%20informações%20sobre%20agendamento%20de%20uma%20consulta%20avaliativa!"
-        class="bg-gradient-to-r from-[#BBB1F3] via-[#6DCCC4] to-[#5C5299] w-48 md:w-64 p-3 md:p-4 rounded-lg text-black font-iria-sans font-normal hover:opacity-80 hover:scale-105 transition-all duration-300 flex items-center justify-center"
+        class="bg-blue-500 text-white px-14 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-600 transition"
         target="_blank"
         onclick="return gtag_report_conversion(this.href);">
-            Agendar Consulta
+            Mais Informações
         </a>
 
-=======
->>>>>>> e0e15bc (chore: iniciando a nova versão do site)
     </div>
 
     <!-- Imagens com animações -->

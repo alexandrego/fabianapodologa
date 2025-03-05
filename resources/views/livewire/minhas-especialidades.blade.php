@@ -1,8 +1,8 @@
-<div class="w-full bg-[#AFA0FF] flex flex-col justify-center items-center h-auto md:h-[750px] rounded-b-[10px] mt-[-6px] p-4">
+<div class="w-full flex flex-col justify-center items-center p-4">
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
 
-    <div id="especialidades" class="w-full h-auto md:h-[100px] flex justify-center items-center font-iria-sans font-normal text-2xl md:text-[32px] text-black mt-10 md:mt-[90px] mb-6 md:mb-[12px] text-center">
-        Minhas Especialidades
+    <div id="especialidades" class="w-full flex justify-center items-center font-iria-sans font-bold text-[56px] text-black px-32 py-5 text-center">
+      Dedicação e Soluções aplicadas ao seu Bem Estar e Saúde
     </div>
 
     <div class="flex flex-col md:flex-row items-center justify-center md:justify-around w-full px-4 space-y-6 md:space-y-0">
@@ -10,7 +10,7 @@
             <img class="w-60 sm:w-80 md:w-[500px] h-60 sm:h-80 md:h-[500px] rounded-lg" src="/assets/img/podologia-geriatrica.svg" alt="Podologia Geriátrica">
         </div>
 
-        <div class="w-full md:w-1/2 font-iria-sans font-normal text-base sm:text-lg leading-relaxed mb-6 md:mb-10 px-4">
+        <div class="w-full md:w-1/2 font-iria-sans font-normal text-justify text-base leading-relaxed px-4">
             <p>Como podóloga geriátrica, minha prática é dedicada a cuidar dos pés dos idosos, garantindo que cada paciente receba um tratamento especializado e personalizado.</p>
 
             <p class="mt-4 mb-4">Minhas especialidades incluem:</p>

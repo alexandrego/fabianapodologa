@@ -1,4 +1,4 @@
-<div class="w-full h-auto bg-[#D9D9D9] flex flex-col md:flex-row justify-between items-center rounded-b-[10px] relative p-4">
+<div class="w-full h-auto flex flex-col md:flex-row justify-between items-center rounded-b-[10px] relative p-4">
 
     <!-- Texto de direitos reservados -->
     <div id="footer" class="font-iria-sans font-normal text-[12px] text-black text-center md:text-left">
