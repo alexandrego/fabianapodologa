@@ -7,7 +7,7 @@
   </div>
 
   <div class="flex flex-col md:flex-row items-center justify-center md:justify-around w-full sm:px-4 space-y-6 md:space-y-0">
-    <div class="w-full md:w-1/2 text-[18px] font-light text-justify text-sm sm:text-[22px] leading-relaxed md:mb-10 sm:px-4 p-3">
+    <div class="w-full md:w-1/2 text-[18px] font-light text-justify sm:text-[22px] leading-relaxed md:mb-10 sm:px-4 p-3">
       Sou uma podóloga formada e apaixonada pelo cuidado com os pés. </br>
       Formada desde 2023, minha jornada profissional é impulsionada pela dedicação em garantir a saúde e
       o bem-estar dos meus pacientes. </br>
