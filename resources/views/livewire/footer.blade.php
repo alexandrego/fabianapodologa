@@ -2,7 +2,7 @@
 
     <!-- Texto de direitos reservados -->
     <div id="footer" class="font-iria-sans font-normal text-[12px] text-black text-center md:text-left">
-        © Todos os direitos reservados - Podóloga Dra. Fabiana Gonçalves
+        © Todos os direitos reservados - Podóloga Fabiana Gonçalves
     </div>
 
     <!-- Desenvolvido por -->
