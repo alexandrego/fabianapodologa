@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('assets/img/nova-logo.svg') }}">
+    
+    <link rel="icon" href="{{ asset('assets/img/logo-705-x-1023.png') }}">
 
     <title>Podóloga - Fabiana Gonçalves</title>
 
