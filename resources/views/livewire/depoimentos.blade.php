@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col justify-around items-center sm:px-4 sm:py-2 mt-4">
+<div class="w-full flex flex-col justify-around items-center sm:px-4 sm:py-2 mt-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="depoimentos">
     <div class="w-full flex flex-col md:flex-row md:justify-around md:items-center md:space-x-8">
         <!-- Depoimento 1 -->
         <div class="w-full md:w-1/3 h-auto flex flex-col items-center justify-around mb-8 md:mb-0">
@@ -31,3 +31,24 @@
         </div>
     </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const depoimentos = document.getElementById("depoimentos");
+
+    function criarObserver(elemento, threshold) {
+        return new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    elemento.classList.remove("translate-y-10", "opacity-0");
+                }
+            },
+            { threshold: threshold }
+        );
+    }
+
+    const observerDepoimentos = criarObserver(depoimentos, 0.3); // Ativa quando 30% do título estiver visível
+
+    observerDepoimentos.observe(depoimentos);
+  });
+</script>

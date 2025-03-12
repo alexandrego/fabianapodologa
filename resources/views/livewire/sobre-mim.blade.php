@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col justify-center items-center sm:px-4">
+<div class="w-full flex flex-col justify-center items-center sm:px-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="sobreMim">
   {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
 
   <div id="sobre-mim" class="w-full flex justify-center items-center font-iria-sans font-bold text-[32px] sm:text-[56px] text-black sm:px-8 md:px-32 sm:py-5 text-center leading-relaxed">
@@ -25,3 +25,24 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sobreMim = document.getElementById("sobreMim");
+
+    function criarObserver(elemento, threshold) {
+        return new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    elemento.classList.remove("translate-y-10", "opacity-0");
+                }
+            },
+            { threshold: threshold }
+        );
+    }
+
+    const observerSobreMim = criarObserver(sobreMim, 0.3); // Ativa quando 30% do título estiver visível
+
+    observerSobreMim.observe(sobreMim);
+  });
+</script>

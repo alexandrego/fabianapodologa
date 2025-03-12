@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col md:flex-row items-center justify-between p-6 md:p-12 bg-cover bg-center bg-no-repeat" 
+<div class="w-full flex flex-col md:flex-row items-center justify-between p-6 md:p-12 bg-cover bg-center bg-no-repeat opacity-0 transition-all duration-500 transform scale-90" id="header" 
     style="background-image: url('/assets/img/fundo-ellipse.svg');background-size: contain;">
     <!-- Informações e botão -->
     <div class="w-full md:w-1/2 flex flex-col items-center text-center md:text-left">
@@ -62,3 +62,12 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    // Espera o site carregar completamente antes de exibir o header com animação
+    window.addEventListener("load", () => {
+        const header = document.getElementById("header");
+        header.classList.remove("opacity-0", "scale-90");
+    });
+</script>

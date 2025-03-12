@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col justify-center items-center sm:p-4">
+<div class="w-full flex flex-col justify-center items-center sm:p-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="especialidades">
     <div id="especialidades" class="w-full text-center font-iria-sans font-bold text-[30px] md:text-[56px] text-black px-1 sm:px-6 md:px-32 py-5">
       Dedicação e Soluções aplicadas ao seu Bem Estar e Saúde
     </div>
@@ -55,3 +55,24 @@
         </div>
     </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const especialidades = document.getElementById("especialidades");
+
+    function criarObserver(elemento, threshold) {
+        return new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    elemento.classList.remove("translate-y-10", "opacity-0");
+                }
+            },
+            { threshold: threshold }
+        );
+    }
+
+    const observerEspecialidades = criarObserver(especialidades, 0.3); // Ativa quando 30% do título estiver visível
+
+    observerEspecialidades.observe(especialidades);
+  });
+</script>

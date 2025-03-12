@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col justify-around items-center rounded-b-[10px] relative sm:p-4">
+<div class="w-full flex flex-col justify-around items-center rounded-b-[10px] relative sm:p-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="patologias">
     
   <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pl-[5vw]">
     <!-- Bloco 1 -->
@@ -41,3 +41,25 @@
         </a>
   </div>
 </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const patologias = document.getElementById("patologias");
+
+    function criarObserver(elemento, threshold) {
+        return new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    elemento.classList.remove("translate-y-10", "opacity-0");
+                }
+            },
+            { threshold: threshold }
+        );
+    }
+
+    const observerPatologias = criarObserver(patologias, 0.3); // Ativa quando 30% do título estiver visível
+
+    observerPatologias.observe(patologias);
+  });
+</script>

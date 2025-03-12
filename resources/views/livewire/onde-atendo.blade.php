@@ -1,4 +1,4 @@
-<div class="w-full h-auto flex flex-col justify-around items-center px-4">
+<div class="w-full h-auto flex flex-col justify-around items-center px-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="ondeAtendo">
 
   <!-- Título -->
   <div id="onde-atendo" class="w-full text-center font-iria-sans font-bold text-3xl sm:text-4xl md:text-[56px] text-black sm:my-4">
@@ -53,3 +53,23 @@
 
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ondeAtendo = document.getElementById("ondeAtendo");
+
+    function criarObserver(elemento, threshold) {
+        return new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    elemento.classList.remove("translate-y-10", "opacity-0");
+                }
+            },
+            { threshold: threshold }
+        );
+    }
+
+    const observerOndeAtendo = criarObserver(ondeAtendo, 0.3); // Ativa quando 30% do título estiver visível
+
+    observerOndeAtendo.observe(ondeAtendo);
+  });
+</script>
