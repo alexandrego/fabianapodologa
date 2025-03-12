@@ -33,7 +33,7 @@
   </div>
   <div class="w-full flex items-center justify-center py-10 md:py-20">
     <!-- Botão do whatsapp com rastreamento de clique -->
-    <a href="https://wa.me/47991626283?text=Olá%20Fabiana,%20gostaria%20de%20de%20agendar%20uma%20consulta%20com%20você!"
+    <a href="https://wa.me/47991626283?text=Olá%20Fabiana,%20gostaria%20de%20agendar%20uma%20consulta%20com%20você!"
         class="bg-blue-500 text-white px-10 md:px-14 py-3 rounded-lg text-lg font-normal shadow-md hover:bg-blue-600 transition"
         target="_blank"
         onclick="return gtag_report_conversion(this.href);">
