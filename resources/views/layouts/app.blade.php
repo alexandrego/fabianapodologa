@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {{-- Tag conversão --}}
+    <meta name="google-site-verification" content="LgIl8u4HE7U7TCeINaCTHtoxpnf6OT0vq0U4WZOmrBc" />
+
     <link rel="icon" href="{{ asset('assets/img/logo-705-x-1023.png') }}">
 
     <title>Podóloga - Fabiana Gonçalves</title>
@@ -25,7 +28,7 @@
         }
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) Alexandre Conta Suspensa -->
     {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
     </script>
     <script>
