@@ -1,5 +1,5 @@
 <div class="w-full flex flex-col justify-around items-center rounded-b-[10px] relative sm:p-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="patologias">
-    
+
   <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 pl-[5vw]">
     <!-- Bloco 1 -->
     <div class="w-full md:w-1/3 h-auto flex flex-col items-center justify-around my-4">
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div class="w-full flex items-center justify-center py-10 md:py-20">
+  <div id="agendar-consulta" class="w-full flex items-center justify-center py-10 md:py-20">
     <!-- Botão do whatsapp com rastreamento de clique -->
     <a href="https://wa.me/47991626283?text=Olá%20Fabiana,%20gostaria%20de%20agendar%20uma%20consulta%20com%20você!"
         class="bg-blue-500 text-white px-10 md:px-14 py-3 rounded-lg text-lg font-normal shadow-md hover:bg-blue-600 transition"

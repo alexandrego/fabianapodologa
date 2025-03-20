@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="icon" href="{{ asset('assets/img/logo-705-x-1023.png') }}">
 
     <title>Podóloga - Fabiana Gonçalves</title>
@@ -26,7 +26,7 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -34,6 +34,17 @@
         gtag('js', new Date());
 
         gtag('config', 'G-W64ZGD8KZB');
+    </script> --}}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16942256011">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16942256011');
     </script>
 </head>
 <body class="bg-[#ffffff]">
