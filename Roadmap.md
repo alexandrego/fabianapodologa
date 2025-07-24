@@ -13,23 +13,40 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
 ## Roadmap de Evolução
 
 ### 1. Experiência do Usuário (UX/UI)
-- [ ] Melhorar responsividade em dispositivos móveis
-  - Garantir que todos os componentes Livewire e seções estejam 100% adaptados a telas pequenas (testar em múltiplos dispositivos)
-  - Ajustar espaçamentos, tamanhos de fonte e imagens para mobile
-  - Corrigir possíveis quebras de layout em resoluções intermediárias
-- [ ] Adicionar animações suaves para transições de seções
-  - Padronizar transições de entrada/saída usando Tailwind CSS e/ou Alpine.js
-  - Aplicar animações nos banners, cards de patologias e botões de ação
-  - Garantir que as animações não prejudiquem a performance
+- [✅] Melhorar responsividade em dispositivos móveis
+  - [✅] Revisar todos os componentes Livewire em telas de 320px a 1440px
+    - [✅] Listar todos os componentes Livewire utilizados na aplicação
+    - [✅] Para cada componente, testar visualmente nos principais breakpoints: 320px, 375px, 425px, 768px, 1024px, 1440px
+    - [✅] Utilizar as classes utilitárias do Tailwind CSS para responsividade (`sm:`, `md:`, `lg:`, `xl:`)
+    - [✅] Garantir que grids, flexbox e espaçamentos estejam adaptados para cada resolução
+    - [✅] Verificar se textos, botões e inputs não estouram ou ficam sobrepostos
+    - [✅] Usar ferramentas como o DevTools do Chrome para simular diferentes dispositivos
+    - [✅] Documentar ajustes necessários para cada componente
+    - [✅] Refatorar componentes que apresentarem problemas, priorizando mobile first
+    - [✅] Validar se imagens e SVGs estão dimensionando corretamente
+    - [✅] Revisar se não há barras de rolagem horizontais indesejadas
+    - [✅] Pedir feedback de usuários reais/testadores em diferentes dispositivos
+    - [✅] Ajustar paddings, margins e fontes usando breakpoints do Tailwind
+    - [✅] Testar formulários e botões em dispositivos reais (mobile/tablet)
+    - [✅] Corrigir imagens que não redimensionam corretamente
+    - [✅] Validar layout em navegadores diferentes (Chrome, Firefox, Safari)
+- [✅] Adicionar animações suaves para transições de seções
+  - [✅] Definir padrão de animação para entrada/saída de seções (ex: fade, slide)
+  - [✅] Implementar animações com Tailwind CSS e/ou Alpine.js
+  - [✅] Adicionar transições em banners, cards e botões principais
+  - [ ] Testar impacto das animações na performance mobile
 - [ ] Revisar acessibilidade (contraste, navegação por teclado, etc.)
-  - Verificar contraste de cores em textos e botões (usar ferramentas como Lighthouse)
-  - Adicionar atributos ARIA e roles nos componentes interativos
-  - Garantir navegação por teclado em menus, botões e formulários
-  - Incluir textos alternativos descritivos em todas as imagens
+  - [ ] Rodar auditoria de acessibilidade com Lighthouse
+  - [ ] Ajustar contraste de cores conforme recomendações WCAG
+  - [ ] Adicionar atributos ARIA e roles em todos os botões e links
+  - [ ] Garantir navegação por teclado em menus, botões e formulários
+  - [ ] Revisar e adicionar alt text descritivo em todas as imagens
 - [ ] Implementar dark mode (opcional)
-  - Adicionar suporte a tema escuro via Tailwind CSS
-  - Permitir alternância manual e/ou automática conforme preferências do sistema
-  - Testar legibilidade e contraste em ambos os temas
+  - [ ] Configurar dark mode no tailwind.config.js
+  - [ ] Adicionar botão de alternância de tema no layout principal
+  - [ ] Ajustar cores de fundo, textos e bordas para o tema escuro
+  - [ ] Testar contraste e legibilidade em todas as páginas
+  - [ ] Salvar preferência do usuário (localStorage ou sistema)
 
 ### 2. Funcionalidades
 - [ ] Sistema de agendamento online (com calendário e confirmação automática)
@@ -54,13 +71,13 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
   - Configuração de eventos personalizados (ex: clique em botão de agendamento)
 
 ### 3. SEO e Performance
-- [ ] Otimizar SEO on-page (meta tags, titles, descriptions)
-  - Adicionar e revisar meta tags em todas as páginas (title, description, og:image, etc.)
-  - Utilizar títulos e descrições dinâmicas conforme o conteúdo
-  - Garantir URLs amigáveis e breadcrumbs
-- [ ] Gerar sitemap.xml e robots.txt dinâmicos
-  - Implementar geração automática de sitemap.xml com rotas públicas
-  - Atualizar robots.txt conforme áreas públicas/privadas
+- [✅] Otimizar SEO on-page (meta tags, titles, descriptions)
+  - [✅] Adicionar e revisar meta tags em todas as páginas (title, description, og:image, etc.)
+  - [✅] Utilizar títulos e descrições dinâmicas conforme o conteúdo
+  - [ ] Garantir URLs amigáveis e breadcrumbs
+- [✅] Gerar sitemap.xml e robots.txt dinâmicos
+  - [✅] Implementar geração automática de sitemap.xml com rotas públicas
+  - [✅] Atualizar robots.txt conforme áreas públicas/privadas
 - [ ] Otimizar imagens e assets para carregamento rápido
   - Utilizar formatos modernos (WebP) e compressão de imagens
   - Implementar lazy loading em imagens e iframes
@@ -71,9 +88,9 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
   - Avaliar uso de CDN para distribuição de conteúdo
 
 ### 4. Segurança e Conformidade
-- [ ] Revisar políticas de privacidade e cookies
-  - Atualizar e exibir política de privacidade clara e acessível
-  - Implementar banner de consentimento de cookies (se necessário)
+- [✅] Revisar políticas de privacidade e cookies
+  - [✅] Atualizar e exibir política de privacidade clara e acessível
+  - [✅] Implementar banner de consentimento de cookies
 - [ ] Implementar reCAPTCHA em formulários
   - Adicionar Google reCAPTCHA v2/v3 nos formulários de contato e agendamento
   - Validar respostas no backend para evitar spam

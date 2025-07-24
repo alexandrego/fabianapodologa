@@ -1,4 +1,3 @@
-
 <div align="center">
   <img src="https://raw.githubusercontent.com/alexandrego/fabianapodologa/main/public/assets/img/pe-diabetico.svg" alt="Podologia" width="120" />
   
@@ -22,12 +21,12 @@ A plataforma foi desenvolvida para facilitar o contato entre clientes e a profis
 
 ## 🚀 Principais Funcionalidades
 
-- Página institucional moderna e responsiva
-- Apresentação de especialidades e patologias
-- Depoimentos de clientes
-- Integração direta com WhatsApp para agendamento
-- Painel administrativo (em desenvolvimento)
-- SEO otimizado e carregamento rápido
+- Página inicial responsiva e mobile first
+- Política de Privacidade conforme LGPD
+- Banner de consentimento de cookies
+- Meta tags otimizadas para SEO
+- Sitemap.xml e robots.txt dinâmicos
+- Estrutura pronta para futuras áreas administrativas, blog e agendamento online
 
 ---
 
@@ -101,3 +100,50 @@ Dúvidas, sugestões ou parcerias? Entre em contato pelo WhatsApp disponível no
 ---
 
 <sub>© 2025 Fabiana Podóloga · Desenvolvido por Alexandre Gonçalves</sub>
+
+---
+
+# Podóloga Fabiana Gonçalves - Balneário Camboriú
+
+Aplicação web para divulgação de serviços de podologia, agendamento, informações institucionais e contato.
+
+## Principais Funcionalidades
+- Página inicial responsiva e mobile first
+- Política de Privacidade conforme LGPD
+- Banner de consentimento de cookies
+- Meta tags otimizadas para SEO
+- Sitemap.xml e robots.txt dinâmicos
+- Estrutura pronta para futuras áreas administrativas, blog e agendamento online
+
+## Melhorias Recentes
+- [v1.0.0] Estrutura inicial, layout responsivo, integração WhatsApp
+- [v1.1.0] Política de Privacidade LGPD, link no footer
+- [v1.2.0] Banner de consentimento de cookies
+- [v1.3.0] Meta tags SEO (title, description, og:image, canonical)
+- [v1.4.0] sitemap.xml e robots.txt dinâmicos
+- [v1.5.0] Correção de cidade para Balneário Camboriú
+
+## Controle de Versão
+Sempre que uma melhoria for implementada:
+- Atualize a seção "Melhorias Recentes" com a nova versão e descrição da mudança.
+- Use o padrão semântico: [vMAJOR.MINOR.PATCH].
+- Exemplo: [v1.6.0] Implementação de dark mode.
+
+## Instalação
+1. Clone o repositório
+2. Instale dependências com `composer install` e `npm install`
+3. Configure `.env` e banco de dados
+4. Rode `php artisan migrate` para criar as tabelas
+5. Inicie o servidor com `php artisan serve`
+
+## Deploy
+- Recomenda-se ambiente Linux, PHP 8+, MySQL ou SQLite
+- Para produção, configure HTTPS e headers de segurança
+
+## Contribuição
+- Crie uma branch a partir da `main`
+- Faça suas alterações e envie um Pull Request
+- Descreva claramente o que foi alterado e por quê
+
+## Contato
+Dúvidas ou sugestões? Entre em contato pelo WhatsApp disponível no site.

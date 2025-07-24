@@ -1,27 +1,34 @@
-<div class="w-full flex flex-col justify-center items-center sm:px-4 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out" id="sobreMim">
-  {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
 
-  <div id="sobre-mim" class="w-full flex justify-center items-center font-iria-sans font-bold text-[32px] sm:text-[56px] text-black sm:px-8 md:px-32 sm:py-5 text-center leading-relaxed">
-    Especialista em proporcionar </br>
-    Saúde e Bem Estar aos seus pés
-  </div>
-
-  <div class="flex flex-col md:flex-row items-center justify-center md:justify-around w-full sm:px-4 space-y-6 md:space-y-0">
-    <div class="w-full md:w-1/2 text-[18px] font-light text-justify sm:text-[22px] leading-relaxed md:mb-10 sm:px-4 p-3">
-      Sou uma podóloga formada e apaixonada pelo cuidado com os pés. </br>
-      Formada desde 2023, minha jornada profissional é impulsionada pela dedicação em garantir a saúde e
-      o bem-estar dos meus pacientes. </br>
-      Além de oferecer serviços de manicure, especializei-me em podologia para tratar de forma especializada 
-      problemas como calosidades, unhas encravadas e pés diabéticos.  </br>
-      Acredito que a saúde começa pelos pés e, com cada atendimento, busco proporcionar conforto e melhorar 
-      a qualidade de vida de meus pacientes.  </br>
-      Equilibro meu tempo entre minha família e minha profissão, levando o mesmo carinho e dedicação 
-      que ofereço a minha família para o cuidado dos pés de meus pacientes.  </br>
-      Minha missão é transformar vidas, um passo de cada vez.
+<div class="w-full min-h-[60vh] bg-gradient-to-b from-gray-50 to-white py-12 flex items-center justify-center">
+  <div id="sobreMim" class="max-w-3xl w-full mx-auto bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center opacity-0 translate-y-10 transition-all duration-1000 ease-out p-6 md:p-10">
+    <!-- Foto -->
+    <div class="w-full md:w-1/3 flex justify-center mb-6 md:mb-0">
+      <img class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover shadow-lg border-4 border-blue-200" src="/assets/img/formatura.svg" alt="Podóloga Fabiana">
     </div>
-
-    <div class="w-full hidden md:w-1/3 sm:flex justify-center">
-      <img class="w-[90%] sm:w-60 md:w-[500px] h-[90%] sm:h-60 md:h-[500px] rounded-lg" src="/assets/img/formatura.svg" alt="Podologa Fabiana">
+    <!-- Texto -->
+    <div class="w-full md:w-2/3 flex flex-col justify-center items-center md:items-start">
+      <h2 class="font-iria-sans font-bold text-[28px] sm:text-[38px] text-black mb-2 text-center md:text-left">Sobre Mim</h2>
+      <p class="text-gray-700 text-base sm:text-lg font-light mb-4 text-center md:text-left">
+        Sou Fabiana, podóloga dedicada a cuidar da saúde e bem-estar dos seus pés. Minha missão é proporcionar conforto, prevenção e qualidade de vida para cada paciente.
+      </p>
+      <ul class="space-y-2 text-gray-700 text-base sm:text-lg w-full">
+        <li class="flex items-center gap-2">
+          <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3B82F6"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Formação em podologia e atualização constante.</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3B82F6"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Atendimento humanizado e personalizado.</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3B82F6"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Especialização em calosidades, unhas encravadas, pés diabéticos e reflexologia podal.</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3B82F6"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Dedicação, ética e carinho em cada atendimento.</span>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -29,20 +36,15 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const sobreMim = document.getElementById("sobreMim");
-
-    function criarObserver(elemento, threshold) {
-        return new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    elemento.classList.remove("translate-y-10", "opacity-0");
-                }
-            },
-            { threshold: threshold }
-        );
-    }
-
-    const observerSobreMim = criarObserver(sobreMim, 0.3); // Ativa quando 30% do título estiver visível
-
-    observerSobreMim.observe(sobreMim);
+    if (!sobreMim) return;
+    sobreMim.classList.add('opacity-0', 'translate-y-10');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('translate-y-10', 'opacity-0');
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(sobreMim);
   });
 </script>
