@@ -58,6 +58,11 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
   - CRUD de depoimentos, especialidades e horários de atendimento
   - Login seguro para administradora
   - Interface intuitiva para atualização de conteúdos do site
+  - [ ] Implementar login e cadastro de administradora
+  - [ ] Menu inicial: Monitoramento de acessos (data, hora, IP, origem Facebook/Google, user agent)
+ [⏳] Dashboard interna para monitoramento de acessos
+  - [⏳] Implementar login e cadastro de administradora (backend e proteção de rotas em andamento)
+  - [ ] Menu inicial: Monitoramento de acessos (data, hora, IP, origem Facebook/Google, user agent)
 - [ ] Cadastro de pacientes (opcional, com consentimento LGPD)
   - Formulário de cadastro simples, com aceite de política de privacidade
   - Listagem e histórico de atendimentos (opcional)
@@ -66,9 +71,9 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
   - CRUD de posts no painel administrativo
   - Listagem de artigos no frontend, com busca e categorias
   - SEO otimizado para cada post
-- [ ] Integração com Google Analytics e Pixel do Facebook
-  - Inserção dos scripts de rastreamento nas views principais
-  - Configuração de eventos personalizados (ex: clique em botão de agendamento)
+- [✅] Integração com Google Analytics e Pixel do Facebook
+  - [✅] Inserção dos scripts de rastreamento nas views principais
+  - [✅] Configuração de eventos personalizados (ex: clique em botão de agendamento)
 
 ### 3. SEO e Performance
 - [✅] Otimizar SEO on-page (meta tags, titles, descriptions)
