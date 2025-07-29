@@ -1,4 +1,4 @@
-<div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-4 md:p-10 mt-2 md:mt-6 bg-gradient-to-br from-blue-100 via-white to-blue-200 bg-cover bg-center bg-no-repeat rounded-2xl shadow-xl opacity-0 transition-all duration-500 transform scale-90" id="header">
+<div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-4 md:p-10 mt-2 md:mt-6 bg-gradient-to-br from-blue-100 via-white to-blue-200 bg-cover bg-center bg-no-repeat rounded-2xl shadow-xl" id="header">
     <!-- Informações e botão -->
     <div class="w-full md:w-1/2 flex flex-col items-center text-center md:text-left">
         <div class="font-bold text-[36px] md:text-[72px] leading-tight drop-shadow-lg">Podóloga</div>
@@ -38,7 +38,7 @@
     <!-- Imagens com animações -->
     <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0 relative">
         <div class="relative w-[90%] md:w-[60%] rounded-2xl overflow-hidden shadow-lg bg-white/60">
-            <img src="/assets/img/fabiana-podologa.svg" class="w-full object-cover aspect-square" alt="Fabiana Podóloga" />
+            <img src="/assets/img/fabiana-podologa.svg" class="w-full object-cover aspect-square" alt="Fabiana Podóloga" width="600" height="600" />
         </div>
     </div>
 </div>

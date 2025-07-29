@@ -21,7 +21,7 @@
             <p><strong>E-mail:</strong> {{ $user->email }}</p>
         </div>
         <p>Seu acesso ao painel administrativo está ativo.</p>
-        <div class="footer">Podóloga Dra. Fabiana &copy; {{ date('Y') }}</div>
+        <div class="footer">Podóloga Fabiana Gonçalves &copy; {{ date('Y') }}</div>
     </div>
 </body>
 </html>

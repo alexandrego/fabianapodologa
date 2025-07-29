@@ -13,7 +13,7 @@
 
 <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex justify-center pt-10 pb-10">
   <div class="max-w-3xl w-full bg-white rounded-xl shadow-xl p-6 md:p-10 border border-blue-100">
-    <a href="/" class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-lg bg-blue-900 text-white text-sm font-semibold shadow hover:bg-blue-700 transition">
+    <a href="/" class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-lg bg-blue-900 text-white text-sm font-semibold shadow hover:bg-blue-700">
       <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
       Voltar
     </a>

@@ -19,7 +19,7 @@
         <p>Olá, {{ $user->name }}!</p>
         <div class="code">{{ $code }}</div>
         <p>Digite este código para confirmar seu acesso ao sistema.</p>
-        <div class="footer">Podóloga Dra. Fabiana &copy; {{ date('Y') }}</div>
+        <div class="footer">Podóloga Fabiana Gonçalves &copy; {{ date('Y') }}</div>
     </div>
 </body>
 </html>

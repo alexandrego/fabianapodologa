@@ -13,23 +13,41 @@
 @endsection
 
 @section('content')
-    <livewire:banner />
 
-    <livewire:minhas-especialidades />
+    <div id="main-content">
+        <livewire:banner />
+        <livewire:minhas-especialidades />
+        <livewire:patologias />
+        <livewire:sobre-mim />
+        <livewire:depoimentos />
+        <livewire:onde-atendo />
+        <livewire:footer />
+    </div>
 
-    <livewire:patologias />
-
-    <livewire:sobre-mim />
-
-    <livewire:depoimentos />
-
-    <livewire:onde-atendo />
-
-    <livewire:footer />
-
-    <!-- Menu de login/entrar -->
-    <div class="absolute top-4 right-4 z-50">
+    <!-- Menu de login/entrar fixo no bottom para mobile -->
+    <!-- Desktop: menu superior -->
+    <div class="hidden sm:block absolute top-4 right-4 z-50">
         <a href="{{ route('admin.login') }}" class="px-4 py-2 rounded-lg bg-blue-900 text-white text-sm font-semibold shadow hover:bg-blue-700 transition">Área Administrativa</a>
         <a href="{{ route('patient.login') }}" class="px-4 py-2 rounded-lg bg-green-700 text-white text-sm font-semibold shadow hover:bg-green-800 transition ml-2">Área do Paciente</a>
     </div>
+
+    <!-- Mobile: menu fixo no bottom -->
+    <div class="sm:hidden fixed bottom-0 left-0 w-full z-40 bg-white border-t border-gray-200 shadow-lg flex justify-center py-2 gap-2">
+        <a href="{{ route('admin.login') }}" class="flex-1 mx-2 px-0 py-3 rounded-lg bg-blue-900 text-white text-base font-semibold shadow hover:bg-blue-700 transition text-center">Área Administrativa</a>
+        <a href="{{ route('patient.login') }}" class="flex-1 mx-2 px-0 py-3 rounded-lg bg-green-700 text-white text-base font-semibold shadow hover:bg-green-800 transition text-center">Área do Paciente</a>
+    </div>
+
+    <!-- Script: adicionar padding-bottom ao conteúdo principal em mobile -->
+    <script>
+        function adjustPaddingForMobileMenu() {
+            const mainContent = document.getElementById('main-content');
+            if (window.innerWidth < 640) {
+                mainContent.style.paddingBottom = '70px'; // altura do menu + espaçamento
+            } else {
+                mainContent.style.paddingBottom = '0';
+            }
+        }
+        window.addEventListener('resize', adjustPaddingForMobileMenu);
+        window.addEventListener('DOMContentLoaded', adjustPaddingForMobileMenu);
+    </script>
 @endsection

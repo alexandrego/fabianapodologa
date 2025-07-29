@@ -88,7 +88,7 @@
         </script> --}}
 
         <!-- Google tag (gtag.js) Alexandre Conta Suspensa -->
-        {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64ZGD8KZB">
         </script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -96,17 +96,7 @@
             gtag('js', new Date());
 
             gtag('config', 'G-W64ZGD8KZB');
-        </script> --}}
-    {{-- Configurações antigas da conta suspensa --}}
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
+        </script>
 </head>
 <body class="bg-[#ffffff]">
     <!-- Google Tag Manager (noscript) -->

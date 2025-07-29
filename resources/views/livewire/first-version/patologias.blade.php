@@ -10,7 +10,7 @@
                 Calos e calosidades são problemas comuns, mas com os cuidados adequados é possível manter a saúde dos pés em dia.
             </div>
             <a href="https://wa.me/47991626283?text=Olá%20Dra.%20Fabiana,%20gostaria%20de%20saber%20mais%20sobre%20tratamento%20de%20calos%20e%20como%20agendar%20uma%20consulta." class="w-[250px] flex justify-center">
-                <div class="bg-gradient-to-r from-[#BBB1F3] via-[#6DCCC4] to-[#5C5299] w-48 md:w-64 p-3 md:p-4 rounded-lg text-black font-iria-sans font-normal hover:opacity-80 hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                <div class="bg-gradient-to-r from-[#BBB1F3] via-[#6DCCC4] to-[#5C5299] w-48 md:w-64 p-3 md:p-4 rounded-lg text-black font-iria-sans font-normal hover:opacity-80 hover:scale-105 flex items-center justify-center">
                     Saiba mais
                 </div>
             </a>

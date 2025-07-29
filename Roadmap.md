@@ -34,7 +34,24 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
   - [✅] Definir padrão de animação para entrada/saída de seções (ex: fade, slide)
   - [✅] Implementar animações com Tailwind CSS e/ou Alpine.js
   - [✅] Adicionar transições em banners, cards e botões principais
-  - [ ] Testar impacto das animações na performance mobile
+  - [✅] Testar impacto das animações na performance mobile
+    - LCP inicial: 5,70s (ruim) — Elemento principal identificado pelo Lighthouse
+    - Checklist e resultados documentados:
+      - LCP sem banner: 1,18s a 1,92s (ótimo)
+      - LCP com banner exibido após carregamento: 1,18s a 1,84s (ótimo)
+      - LCP com banner exibido logo no início: >4s (ruim)
+      - Observação: Exibir o banner apenas após o carregamento total da página resolve o problema de LCP.
+      - Removidas todas as animações de transição dos banners.
+      - Adicionados width e height na imagem principal para evitar layout shift.
+      - Tarefa concluída com sucesso!
+
+---
+
+- [ ] Melhorar responsividade dos botões "Área Administrativa" e "Área do Paciente"
+  - Analisar comportamento dos botões em diferentes tamanhos de tela (mobile, tablet, desktop)
+  - Garantir que não fiquem sobrepostos, cortados ou desalinhados
+  - Ajustar classes do Tailwind para responsividade e espaçamento adequado
+  - Testar visualmente e documentar antes/depois
 - [ ] Revisar acessibilidade (contraste, navegação por teclado, etc.)
   - [ ] Rodar auditoria de acessibilidade com Lighthouse
   - [ ] Ajustar contraste de cores conforme recomendações WCAG

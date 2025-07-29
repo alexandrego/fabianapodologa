@@ -11,7 +11,7 @@
         </div>
 
         <a href="https://wa.me/47991626283?text=Olá%20Dra.%20Fabiana,%20gostaria%20de%20mais%20informações%20sobre%20agendamento%20de%20uma%20consulta%20avaliativa!" 
-        class="bg-gradient-to-r from-[#BBB1F3] via-[#6DCCC4] to-[#5C5299] w-48 md:w-64 p-3 md:p-4 rounded-lg text-black font-iria-sans font-normal hover:opacity-80 hover:scale-105 transition-all duration-300 flex items-center justify-center"
+        class="bg-gradient-to-r from-[#BBB1F3] via-[#6DCCC4] to-[#5C5299] w-48 md:w-64 p-3 md:p-4 rounded-lg text-black font-iria-sans font-normal flex items-center justify-center"
         target="_blank">
             Agendar Consulta
         </a>

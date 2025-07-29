@@ -1,9 +1,8 @@
 
-<footer class="w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-6 px-4 mt-8">
+<footer class="w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-6 px-4 mt-8 mb-20 sm:mb-0">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <!-- Logo/Nome -->
-    <div class="flex items-center gap-2 mb-2 md:mb-0">
-      <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="#2563eb">FG</text></svg>
+    <!-- Nome -->
+    <div class="mb-2 md:mb-0">
       <span class="font-bold text-lg tracking-wide">Podóloga Fabiana Gonçalves</span>
     </div>
     <!-- Ícones sociais -->
@@ -25,15 +24,17 @@
       Desenvolvido por <a href="https://connectedpurpose.com.br" target="_blank" class="text-blue-300 hover:text-white font-semibold">Connected Purpose</a>
     </div>
   </div>
-    <div class="w-full mt-4">
-      <a href="/privacidade" class="text-xs text-yellow-300 hover:text-yellow-400 underline font-medium" target="_blank" rel="noopener">Política de Privacidade</a>
+    <div class="w-full mt-4 flex justify-center">
+      <a href="/privacidade" class="text-xs text-yellow-300 hover:text-yellow-400 font-medium no-underline" style="text-decoration: none;" target="_blank" rel="noopener">Política de Privacidade</a>
     </div>
     <div x-data="{ showCookies: localStorage.getItem('cookiesAccepted') !== 'true' }" x-init="() => { if(localStorage.getItem('cookiesAccepted') !== 'true') showCookies = true }" class="relative">
         <!-- Banner de Consentimento de Cookies -->
-        <div x-show="showCookies" x-transition class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:bottom-8 z-50 bg-white border border-blue-200 shadow-lg rounded-xl p-4 flex flex-col md:flex-row items-center gap-4 text-gray-800 max-w-xl mx-auto">
-            <div class="flex-1 text-sm">
-                Este site utiliza cookies para melhorar sua experiência, analisar estatísticas e personalizar conteúdo. Ao continuar navegando, você concorda com nossa <a href="{{ route('privacidade') }}" class="underline text-blue-700 hover:text-blue-900">Política de Privacidade</a>.
+        <template x-if="showCookies">
+            <div x-init="window.addEventListener('load', () => { setTimeout(() => { showCookies = true }, 200) })" x-show="showCookies" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:bottom-8 z-50 bg-white border border-blue-200 shadow-lg rounded-xl p-4 flex flex-col md:flex-row items-center gap-4 text-gray-800 max-w-xl mx-auto">
+                <div class="flex-1 text-sm">
+                    Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="{{ route('privacidade') }}" class="underline text-blue-700 hover:text-blue-900">Política de Privacidade</a>.
+                </div>
+                <button @click="localStorage.setItem('cookiesAccepted', 'true'); showCookies = false" class="px-4 py-2 rounded-lg bg-blue-900 text-white font-semibold text-sm">Aceitar</button>
             </div>
-            <button @click="localStorage.setItem('cookiesAccepted', 'true'); showCookies = false" class="px-4 py-2 rounded-lg bg-blue-900 text-white font-semibold shadow hover:bg-blue-700 transition text-sm">Aceitar</button>
-        </div>
+        </template>
 </footer>

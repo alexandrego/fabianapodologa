@@ -23,7 +23,7 @@
             <p><strong>E-mail:</strong> {{ $user->email }}</p>
         </div>
         <p>Se você não reconhece este acesso, altere sua senha imediatamente.</p>
-        <div class="footer">Podóloga Dra. Fabiana &copy; {{ date('Y') }}</div>
+        <div class="footer">Podóloga Fabiana Gonçalves &copy; {{ date('Y') }}</div>
     </div>
 </body>
 </html>
