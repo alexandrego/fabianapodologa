@@ -72,14 +72,6 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Patient::class,
         ],
-<<<<<<< HEAD
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
-=======
->>>>>>> 93b64f8 (chore: Atualização sem sucesso)
     ],
 
     /*

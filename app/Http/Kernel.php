@@ -38,5 +38,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'patient' => \App\Http\Middleware\PatientMiddleware::class,
         'test' => \App\Http\Middleware\TestMiddleware::class,
+        'log.access' => \App\Http\Middleware\LogAccessMiddleware::class,
     ];
 }

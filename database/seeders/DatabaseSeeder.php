@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\AdminUserSeeder;
+use Database\Seeders\PatientSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,11 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-<<<<<<< HEAD
-        $this->call([
-            AdminUserSeeder::class,
-            PatientSeeder::class,
-=======
         // User::factory(10)->create();
 
         // User::factory()->create([
@@ -25,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             AdminUserSeeder::class,
->>>>>>> 93b64f8 (chore: Atualização sem sucesso)
+            PatientSeeder::class,
         ]);
     }
 }
