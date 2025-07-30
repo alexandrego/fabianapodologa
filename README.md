@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/alexandrego/fabianapodologa/main/public/assets/img/pe-diabetico.svg" alt="Podologia" width="120" />
+  <img src="public/assets/img/logo-705-x-1023.png" alt="Podologia" width="120" />
   
   <h1>Podologia - Fabiana</h1>
   <p><strong>Aplicação web para divulgação, agendamento e gestão de serviços de podologia.</strong></p>
