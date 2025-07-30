@@ -2,6 +2,14 @@
 @section('title', 'Dashboard de Acessos')
 @section('content')
 <div class="max-w-4xl mx-auto py-10">
+  <div class="flex justify-end mb-4">
+    <form method="POST" action="{{ route('admin.logout') }}">
+      @csrf
+      <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+        SAIR
+      </button>
+    </form>
+  </div>
   <h1 class="text-2xl font-bold mb-6">Monitoramento de Acessos</h1>
   <table class="w-full bg-white rounded-xl shadow p-4">
     <thead>

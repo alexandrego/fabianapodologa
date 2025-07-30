@@ -1,6 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+Route::middleware([\App\Http\Middleware\AdminMiddleware::class])->group(function () {
+    Route::get('/admin-area', function () {
+        return 'Admin area accessed';
+    })->name('admin.area');
+});
+
+Route::middleware([\App\Http\Middleware\PatientMiddleware::class])->group(function () {
+    Route::get('/patient-area', function () {
+        return 'Patient area accessed';
+    })->name('patient.area');
+});
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\DashboardController;
 
@@ -21,8 +33,11 @@ Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admi
 Route::get('/admin/verify-code', [AdminAuthController::class, 'showVerifyCodeForm'])->name('admin.verify_code');
 Route::post('/admin/verify-code', [AdminAuthController::class, 'verifyCode']);
 
+use App\Http\Middleware\AdminMiddleware;
+use App\Http\Middleware\PatientMiddleware;
+
 // Dashboard protegida
-Route::middleware(['admin'])->group(function () {
+Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 });
 
@@ -40,6 +55,6 @@ Route::get('/paciente/verify-code', [PatientAuthController::class, 'showVerifyCo
 Route::post('/paciente/verify-code', [PatientAuthController::class, 'verifyCode']);
 
 // Dashboard protegida do paciente
-Route::middleware(['patient'])->group(function () {
+Route::middleware([PatientMiddleware::class])->group(function () {
     Route::get('/paciente/dashboard', [PatientDashboardController::class, 'index'])->name('patient.dashboard');
 });

@@ -68,6 +68,7 @@ class PatientAuthController extends Controller
         Auth::guard('patient')->logout();
         return redirect()->route('patient.verify_code');
     }
+
     public function showVerifyCodeForm()
     {
         return view('patient.verify_code');
@@ -89,5 +90,13 @@ class PatientAuthController extends Controller
             return redirect()->route('patient.dashboard');
         }
         return back()->withErrors(['code' => 'Código inválido ou expirado']);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('patient')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('patient.login');
     }
 }
