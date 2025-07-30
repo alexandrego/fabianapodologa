@@ -78,6 +78,33 @@ Este projeto é uma aplicação web desenvolvida em Laravel, voltada para o aten
   - [ ] Implementar login e cadastro de administradora
   - [ ] Menu inicial: Monitoramento de acessos (data, hora, IP, origem Facebook/Google, user agent)
  [⏳] Dashboard interna para monitoramento de acessos
+
+## Seeds Criados
+
+- **AdminUserSeeder**: Cria um usuário administrador com as seguintes credenciais:
+  - Email: atendimento@fabianapodologa.com.br
+  - Senha: 252605
+
+- **PatientSeeder**: Cria um usuário paciente com as seguintes credenciais:
+  - Email: atendimento@fabianapodologa.com.br
+  - Senha: 252605
+
+## Comando para executar os seeders
+
+Para popular o banco de dados com os usuários seedados, execute o comando:
+
+```bash
+php artisan db:seed
+```
+
+Este comando executa o `DatabaseSeeder`, que chama os seeders `AdminUserSeeder` e `PatientSeeder`.
+
+## Observações
+
+- Os usuários criados podem ser usados para acessar as dashboards de administrador e paciente, respectivamente.
+- O logout nas dashboards foi corrigido para funcionar via formulário POST, seguindo as boas práticas do Laravel.
+- O método `logout` foi implementado no `PatientAuthController` para evitar erros.
+
   - [⏳] Implementar login e cadastro de administradora (backend e proteção de rotas em andamento)
   - [ ] Menu inicial: Monitoramento de acessos (data, hora, IP, origem Facebook/Google, user agent)
 - [ ] Cadastro de pacientes (opcional, com consentimento LGPD)
