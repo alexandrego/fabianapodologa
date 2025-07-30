@@ -15,6 +15,7 @@ Route::middleware([\App\Http\Middleware\PatientMiddleware::class])->group(functi
 });
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TestDashboardController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,6 +40,10 @@ use App\Http\Middleware\PatientMiddleware;
 // Dashboard protegida
 Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+});
+
+Route::middleware(['test'])->group(function () {
+    Route::get('/test/dashboard', [TestDashboardController::class, 'index'])->name('test.dashboard');
 });
 
 // Rotas de autenticação de pacientes

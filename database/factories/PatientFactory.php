@@ -15,8 +15,13 @@ class PatientFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
+<<<<<<< HEAD
             //'email_verified_at' => now(),
             'password' => bcrypt('password'), // senha padrão para testes
+=======
+            // 'email_verified_at' => now(),
+            'password' => bcrypt('password'), // password padrão para testes
+>>>>>>> 93b64f8 (chore: Atualização sem sucesso)
             'remember_token' => Str::random(10),
         ];
     }

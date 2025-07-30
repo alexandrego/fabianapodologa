@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
+<<<<<<< HEAD
             $table->string('role')->default('user')->after('password');
+=======
+            $table->string('role')->nullable()->after('password');
+>>>>>>> 93b64f8 (chore: Atualização sem sucesso)
         });
     }
 

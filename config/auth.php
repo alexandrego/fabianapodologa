@@ -72,11 +72,14 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Patient::class,
         ],
+<<<<<<< HEAD
 
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+=======
+>>>>>>> 93b64f8 (chore: Atualização sem sucesso)
     ],
 
     /*
@@ -102,6 +105,12 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'patients' => [
+            'provider' => 'patients',
+            'table' => 'patient_password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],

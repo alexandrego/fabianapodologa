@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Patient;
 use App\Models\PatientTwoFactorCode;
 use App\Mail\PatientTwoFactorCodeMail;
+
+use function random_int;
 
 class PatientAuthController extends Controller
 {
@@ -29,7 +32,7 @@ class PatientAuthController extends Controller
                 'code' => $code,
                 'expires_at' => now()->addMinutes(10)
             ]);
-            \Mail::to($patient->email)->send(new PatientTwoFactorCodeMail($patient, $code));
+            Mail::to($patient->email)->send(new PatientTwoFactorCodeMail($patient, $code));
             session(['2fa_patient_id' => $patient->id]);
             Auth::guard('patient')->logout();
             return redirect()->route('patient.verify_code');
@@ -48,6 +51,8 @@ class PatientAuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:patients',
             'password' => 'required|string|min:6|confirmed',
+        ], [
+            'email.unique' => 'Este e-mail já está cadastrado. Por favor, utilize outro e-mail.',
         ]);
         $patient = Patient::create([
             'name' => $request->name,
@@ -63,7 +68,7 @@ class PatientAuthController extends Controller
             'code' => $code,
             'expires_at' => now()->addMinutes(10)
         ]);
-        \Mail::to($patient->email)->send(new PatientTwoFactorCodeMail($patient, $code));
+        Mail::to($patient->email)->send(new PatientTwoFactorCodeMail($patient, $code));
         session(['2fa_patient_id' => $patient->id]);
         Auth::guard('patient')->logout();
         return redirect()->route('patient.verify_code');
