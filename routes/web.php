@@ -62,13 +62,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-use App\Http\Controllers\AdminAuthController;
-
-// Rota de login admin com verificação de autenticação
-Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login')->middleware('guest:admin');
-
-Route::post('/admin/login', [AdminAuthController::class, 'login']);
-
 // Rotas de teste
 Route::middleware(['test'])->group(function () {
     Route::get('/test/dashboard', [TestDashboardController::class, 'index'])->name('test.dashboard');

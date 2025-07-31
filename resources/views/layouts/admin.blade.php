@@ -16,16 +16,19 @@
             @endphp
 
             @if(Auth::guard('web')->check())
-                <a href="{{ route('home') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded hover:bg-gray-200" title="Dashboard Administrativa">Dashboard Administrativa</a>
+                <span class="text-gray-700 font-semibold">Olá, {{ Auth::user()->name ?? 'Usuário' }}</span>
+                <a href="{{ route('home') }}" class="text-gray-700 hover:text-gray-900 p-2 rounded hover:bg-gray-200" title="Dashboard Administrativa">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4H9v4a2 2 0 0 1-2 2H3z"/>
+                    </svg>
+                </a>
+                <button class="p-2 rounded-full hover:bg-gray-200" title="Notificações">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                </button>
             @elseif(Auth::guard('patient')->check())
                 <a href="{{ route('patient.dashboard') }}" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" title="Dashboard do Paciente">Área do Paciente</a>
             @endif
 
-            <button class="p-2 rounded-full hover:bg-gray-200" title="Notificações">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
-            </button>
-
-            <span class="text-gray-700 font-semibold">Olá, {{ Auth::user()->name ?? 'Usuário' }}</span>
             <form method="POST" action="{{ route('admin.logout') }}">
                 @csrf
                 <button type="submit" class="bg-white text-red-600 px-4 py-2 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Sair</button>
