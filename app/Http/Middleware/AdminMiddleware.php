@@ -18,7 +18,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         // Garante que o usuário está autenticado e é admin
-        if (!Auth::check() || (method_exists(Auth::user(), 'isAdmin') ? !Auth::user()->isAdmin() : (Auth::user()->role ?? null) !== 'admin')) {
+        if (!Auth::check() || (Auth::user()->role ?? null) !== 'admin') {
             return redirect()->route('admin.login')->withErrors(['error' => 'Acesso restrito à área administrativa.']);
         }
         return $next($request);

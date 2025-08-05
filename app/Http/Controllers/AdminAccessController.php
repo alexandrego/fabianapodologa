@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class AdminAccessController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('log.access');
-    }
-
     public function index()
     {
         // Buscar os acessos mais recentes, paginados
@@ -27,7 +22,7 @@ class AdminAccessController extends Controller
             return $acesso;
         });
 
-        return view('dashboard.index', compact('acessos', 'pacientes'));
+        return view('admin.access.index', compact('acessos', 'pacientes'));
     }
 
     private function identifyDevice($userAgent)

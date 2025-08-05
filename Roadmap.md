@@ -104,8 +104,14 @@ Este comando executa o `DatabaseSeeder`, que chama os seeders `AdminUserSeeder` 
 - Os usuários criados podem ser usados para acessar as dashboards de administrador e paciente, respectivamente.
 - O logout nas dashboards foi corrigido para funcionar via formulário POST, seguindo as boas práticas do Laravel.
 - O método `logout` foi implementado no `PatientAuthController` para evitar erros.
+- **Laravel 12 Update**: Corrigido problema de middleware - atualizada propriedade `$routeMiddleware` para `$middlewareAliases` no Kernel.php e uso direto das classes de middleware nas rotas para compatibilidade com Laravel 12.21.0.
+- **Sistema de Tradução**: Implementado sistema completo de traduções em português brasileiro, incluindo mensagens de validação personalizadas e interface admin traduzida.
+- **Interface Admin**: Corrigidos problemas de visibilidade de botões e melhorada UX do CRUD de pacientes com estilos inline robustos e indicadores visuais claros.
+- **Assets e Build**: Corrigido problema crítico no layout admin que referenciava CSS antigo. Atualizado para usar @vite helper e garantir que assets sejam carregados corretamente.
 
-  - [⏳] Implementar login e cadastro de administradora (backend e proteção de rotas em andamento)
+  - [✅] Implementar login e cadastro de administradora (backend e proteção de rotas concluído)
+  - [✅] CRUD de Pacientes com interface traduzida e botões visíveis
+  - [✅] Sistema de build e assets corrigido para ambiente de desenvolvimento
   - [ ] Menu inicial: Monitoramento de acessos (data, hora, IP, origem Facebook/Google, user agent)
 - [ ] Cadastro de pacientes (opcional, com consentimento LGPD)
   - Formulário de cadastro simples, com aceite de política de privacidade

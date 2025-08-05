@@ -24,6 +24,15 @@ class AdminPatientController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:patients,email',
             'password' => 'required|string|min:6|confirmed',
+        ], [
+            'name.required' => 'O nome é obrigatório.',
+            'name.max' => 'O nome não pode ter mais de 255 caracteres.',
+            'email.required' => 'O e-mail é obrigatório.',
+            'email.email' => 'Por favor, informe um e-mail válido.',
+            'email.unique' => 'Este e-mail já está sendo usado por outro paciente.',
+            'password.required' => 'A senha é obrigatória.',
+            'password.min' => 'A senha deve ter pelo menos 6 caracteres.',
+            'password.confirmed' => 'A confirmação da senha não confere.',
         ]);
 
         Patient::create([
@@ -46,6 +55,14 @@ class AdminPatientController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:patients,email,' . $patient->id,
             'password' => 'nullable|string|min:6|confirmed',
+        ], [
+            'name.required' => 'O nome é obrigatório.',
+            'name.max' => 'O nome não pode ter mais de 255 caracteres.',
+            'email.required' => 'O e-mail é obrigatório.',
+            'email.email' => 'Por favor, informe um e-mail válido.',
+            'email.unique' => 'Este e-mail já está sendo usado por outro paciente.',
+            'password.min' => 'A senha deve ter pelo menos 6 caracteres.',
+            'password.confirmed' => 'A confirmação da senha não confere.',
         ]);
 
         $patient->name = $request->name;

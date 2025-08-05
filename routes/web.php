@@ -10,12 +10,12 @@ use App\Http\Middleware\PatientMiddleware;
 use App\Http\Controllers\PatientAuthController;
 use App\Http\Controllers\PatientDashboardController;
 
-Route::prefix('admin')->middleware([AdminMiddleware::class])->name('admin.')->group(function () {
+Route::prefix('admin')->middleware([\App\Http\Middleware\AdminMiddleware::class])->name('admin.')->group(function () {
     Route::get('/', function () {
         return redirect()->route('admin.dashboard');
     })->name('area');
 
-    Route::get('/accesses', [AdminAccessController::class, 'index'])->name('accesses.index')->middleware('log.access');
+    Route::get('/accesses', [AdminAccessController::class, 'index'])->name('accesses.index');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
